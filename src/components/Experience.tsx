@@ -1,61 +1,61 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { experience } from '@/data/experience'
-import Link from 'next/link'
+import React from "react";
+import { experience } from "@/data/experience";
+import Image from "next/image";
 
 const Experience: React.FC = () => {
   return (
     <section className="w-full px-6 md:px-20 py-20 bg-white text-neutral-800">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Experience</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        Experience
+      </h2>
 
       <div className="grid gap-10 max-w-4xl mx-auto">
-        {experience.map((exp, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-md transition"
+        {experience.map((exp) => (
+          <div
+            key={`${exp.title}-${exp.company}`}
+            className="p-6 border rounded-lg shadow-sm mb-6 backdrop-blur-sm  hover:bg-white transition"
           >
-            <h3 className="text-xl font-semibold">{exp.title}</h3>
-            <p className="text-sm text-neutral-600 mb-1">
-              <span className="font-medium">{exp.company}</span>, {exp.location} ·{' '}
-              <Link
-                href={exp.link}
-                target="_blank"
-                className="underline text-blue-600 hover:text-blue-800"
-              >
-                Link
-              </Link>
-            </p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-semibold">{exp.title}</h3>
+                <p className="text-sm text-neutral-600">
+                  {exp.company} · {exp.location}
+                </p>
+                <p className="text-sm text-neutral-500">{exp.date}</p>
+              </div>
 
-            {/* Bullet points */}
-            <ul className="list-disc list-inside text-sm text-neutral-700 mt-2 space-y-1 mb-3">
-              {exp.bullets.map((point, idx) => (
-                <li key={idx}>{point}</li>
+              <Image
+                src={exp.logo}
+                alt={exp.company}
+                width={80}
+                height={80}
+                className="object-contain max-h-14 w-auto"
+              />
+            </div>
+
+            <ul className="mt-4 list-disc list-inside text-sm text-neutral-700 space-y-1">
+              {exp.bullets.map((b, i) => (
+                <li key={i}>{b}</li>
               ))}
             </ul>
 
-            {/* Tool tags */}
-            <div className="flex flex-wrap gap-2 mt-2">
-              {exp.tags.map((tag, idx) => (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {exp.tags.map((tag, i) => (
                 <span
-                  key={idx}
-                  className="flex items-center gap-1 text-xs px-3 py-1 rounded-full bg-neutral-100 text-neutral-700 border border-neutral-200"
+                  key={i}
+                  className="flex items-center gap-1 px-2 py-1 text-xs bg-neutral-100 rounded-full"
                 >
-                  <tag.icon className="w-3 h-3" />
-                  {tag.name}
+                  <tag.icon className="w-4 h-4" /> {tag.name}
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
