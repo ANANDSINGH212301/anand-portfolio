@@ -24,7 +24,7 @@ const Projects = () => {
         )
 
   return (
-    <section className="relative px-6 md:px-20 overflow-hidden mb-10">
+    <section className="relative px-6 md:px-20 overflow-hidden mb-12 ">
       <HomeArrow />
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">

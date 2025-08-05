@@ -26,7 +26,7 @@ import HomeArrow from "@/components/HomeArrow";
 
 const About = () => {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#f6f6f6] via-white to-[#eaeaea] overflow-hidden">
+    <main className="relative h-[128vh] bg-gradient-to-b from-[#f6f6f6] via-white to-[#eaeaea] overflow-hidden">
       <HomeArrow />
       {/* Background grid */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 z-0" />
