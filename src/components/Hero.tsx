@@ -7,6 +7,8 @@ import Link from "next/link";
 import Navbar from "./Navbar";
 import { FiPhone } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
+import Experience from "./Experience";
+
 
 const Hero: React.FC = () => {
   return (
@@ -85,6 +87,10 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Experience */}
+          <Experience />
+ 
         {/* Footer */}
         <div className="absolute z-10 bottom-0 mx-auto w-full max-w-[85rem] bg-white/40 backdrop-blur-xs border border-neutral-300 rounded-2xl px-6 py-6 text-sm text-neutral-700 shadow-md">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">

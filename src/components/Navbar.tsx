@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 

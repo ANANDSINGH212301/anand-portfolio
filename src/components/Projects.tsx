@@ -9,7 +9,6 @@ import HomeArrow from './HomeArrow'
 const Projects = () => {
   const [filter, setFilter] = useState('All')
 
-  // Generate unique filter tags
   const allTags = new Set<string>()
   projects.forEach((project) =>
     project.tags.forEach((tag) => allTags.add(tag.text))
@@ -17,7 +16,6 @@ const Projects = () => {
 
   const tags = ['All', ...Array.from(allTags)]
 
-  // Filter projects by selected tag
   const filteredProjects =
     filter === 'All'
       ? projects
