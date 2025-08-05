@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 import {
   FaGraduationCap,
@@ -8,7 +10,7 @@ import {
   FaServer,
   FaWrench,
   FaCogs,
-} from "react-icons/fa";
+} from 'react-icons/fa'
 import {
   SiMongodb,
   SiMysql,
@@ -21,17 +23,16 @@ import {
   SiCss3,
   SiReact,
   SiNodedotjs,
-} from "react-icons/si";
-import HomeArrow from "@/components/HomeArrow";
+} from 'react-icons/si'
+import HomeArrow from '@/components/HomeArrow'
 
 const About = () => {
   return (
-    <main className="relative h-[128vh] bg-gradient-to-b from-[#f6f6f6] via-white to-[#eaeaea] overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-b from-[#f6f6f6] via-white to-[#eaeaea] overflow-x-hidden pb-24">
       <HomeArrow />
-      {/* Background grid */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 z-0" />
 
-      <div className="relative z-10 px-6 py-12 md:px-20 max-w-6xl mx-auto space-y-17">
+      <div className="relative z-10 px-6 py-12 md:px-20 max-w-6xl mx-auto space-y-16">
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -58,19 +59,19 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-6 text-sm text-neutral-700">
             {[
               {
-                degree: "B.Tech – CSE (2022–2026)",
-                school: "AKGEC, Ghaziabad (AKTU)",
-                detail: "GPA: 7.39/10",
+                degree: 'B.Tech – CSE (2022–2026)',
+                school: 'AKGEC, Ghaziabad (AKTU)',
+                detail: 'GPA: 7.39/10',
               },
               {
-                degree: "12th – HSC (2020–2022)",
-                school: "Janata Vidyalay Khopoli",
-                detail: "70% – Maharashtra Board",
+                degree: '12th – HSC (2020–2022)',
+                school: 'Janata Vidyalay Khopoli',
+                detail: '70% – Maharashtra Board',
               },
               {
-                degree: "10th – SSC (2020)",
-                school: "Shishu Mandir Khopoli",
-                detail: "84% – Maharashtra Board",
+                degree: '10th – SSC (2020)',
+                school: 'Shishu Mandir Khopoli',
+                detail: '84% – Maharashtra Board',
               },
             ].map((edu, i) => (
               <div
@@ -85,64 +86,64 @@ const About = () => {
           </div>
         </motion.section>
 
-        {/* Skills Grid (2 columns) */}
+        {/* Skills Grid */}
         <div className="grid md:grid-cols-2 gap-10">
           {[
             {
               icon: <FaCode className="text-xl text-blue-600" />,
-              title: "Languages",
+              title: 'Languages',
               skills: [
-                { icon: <SiJavascript />, text: "JavaScript" },
-                { text: "Java" },
-                { text: "SQL" },
+                { icon: <SiJavascript />, text: 'JavaScript' },
+                { text: 'Java' },
+                { text: 'SQL' },
               ],
             },
             {
               icon: <FaServer className="text-xl text-purple-600" />,
-              title: "Web & Frameworks",
+              title: 'Web & Frameworks',
               skills: [
-                { icon: <SiHtml5 />, text: "HTML5" },
-                { icon: <SiCss3 />, text: "CSS3" },
-                { icon: <SiTailwindcss />, text: "Tailwind CSS" },
-                { icon: <SiNextdotjs />, text: "Next.js" },
-                { icon: <SiReact />, text: "React.js" },
-                { icon: <SiNodedotjs />, text: "Node.js" },
+                { icon: <SiHtml5 />, text: 'HTML5' },
+                { icon: <SiCss3 />, text: 'CSS3' },
+                { icon: <SiTailwindcss />, text: 'Tailwind CSS' },
+                { icon: <SiNextdotjs />, text: 'Next.js' },
+                { icon: <SiReact />, text: 'React.js' },
+                { icon: <SiNodedotjs />, text: 'Node.js' },
               ],
             },
             {
               icon: <FaToolbox className="text-xl text-green-600" />,
-              title: "Databases & APIs",
+              title: 'Databases & APIs',
               skills: [
-                { icon: <SiMongodb />, text: "MongoDB" },
-                { icon: <SiMysql />, text: "MySQL" },
-                { text: "REST APIs" },
+                { icon: <SiMongodb />, text: 'MongoDB' },
+                { icon: <SiMysql />, text: 'MySQL' },
+                { text: 'REST APIs' },
               ],
             },
             {
               icon: <FaWrench className="text-xl text-amber-600" />,
-              title: "Tools",
+              title: 'Tools',
               skills: [
-                { icon: <SiGithub />, text: "GitHub" },
-                { icon: <SiPostman />, text: "Postman" },
-                { text: "VS Code" },
+                { icon: <SiGithub />, text: 'GitHub' },
+                { icon: <SiPostman />, text: 'Postman' },
+                { text: 'VS Code' },
               ],
             },
             {
               icon: <FaCogs className="text-xl text-gray-700" />,
-              title: "Other Skills",
+              title: 'Other Skills',
               skills: [
-                { text: "Data Structures & Algorithms" },
-                { text: "Problem Solving" },
-                { text: "Responsive Design" },
+                { text: 'Data Structures & Algorithms' },
+                { text: 'Problem Solving' },
+                { text: 'Responsive Design' },
               ],
             },
             {
               icon: <FaGraduationCap className="text-xl text-rose-500" />,
-              title: "Certifications",
+              title: 'Certifications',
               skills: [
-                { text: "Backend Certification – Physics Wallah" },
-                { text: "Frontend Certification – Udemy" },
-                { text: "AI Agent Architect – IBM SkillBuild" },
+                { text: 'Backend Certification – Physics Wallah' },
+                { text: 'Frontend Certification – Udemy' },
+                { text: 'AI Agent Architect – IBM SkillBuild' },
               ],
             },
           ].map((section, i) => (
@@ -177,6 +178,6 @@ const Tag = ({ icon, text }: { icon?: React.ReactNode; text: string }) => (
     {icon}
     {text}
   </span>
-);
+)
 
 export default About

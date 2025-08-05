@@ -56,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     title: 'URL Shortener – MERN Stack Project',
-    image: '/projects/url-shortener.png',
+    image: '/projects/url-shortner.png',
     live: '',
     github: 'https://github.com/ANANDSINGH212301/urlshortner',
     tags: [
